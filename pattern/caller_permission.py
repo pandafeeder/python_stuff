@@ -1,3 +1,8 @@
+"""
+sys._getframe(0) will get current executing stack
+sys._getframe(1) will get upper frame stack
+"""
+
 import sys
 
 class ViolateCallingProtocolException(Exception): pass
