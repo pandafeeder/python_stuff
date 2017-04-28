@@ -49,3 +49,27 @@ def most_common_interests_with(user):
 
 print('the one who has the most common interest with uesr0 is:')
 print(most_common_interests_with(0).most_common(1))
+
+
+salaries_and_tenures = [
+    (83000, 8.7), (88000, 8.1),
+    (48000, 0.7), (76000, 6),
+    (69000, 6.5), (76000, 7.5),
+    (60000, 2.5), (83000, 10),
+    (48000, 1.9), (63000, 4.2)
+]
+
+from matplotlib import pyplot as plt
+
+salaries = [s for s, t in salaries_and_tenures]
+tenures = [t for s, t in salaries_and_tenures]
+
+
+plt.plot(tenures, salaries, color='blue', marker='o', linestyle='none')
+plt.title("Years of Experience")
+plt.ylabel("Salary")
+plt.draw()
+
+
+
+plt.show()
