@@ -1,0 +1,96 @@
+Flask:
+qusr@qusr-MacBook-Pro p_sanic (master)*$ ab -c 100 -t 3 http://127.0.0.1:5000/api/chars
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Finished 1996 requests
+
+
+Server Software:        Werkzeug/0.12.1
+Server Hostname:        127.0.0.1
+Server Port:            5000
+
+Document Path:          /api/chars
+Document Length:        310 bytes
+
+Concurrency Level:      100
+Time taken for tests:   3.000 seconds
+Complete requests:      1996
+Failed requests:        0
+Total transferred:      912172 bytes
+HTML transferred:       618760 bytes
+Requests per second:    665.32 [#/sec] (mean)
+Time per request:       150.303 [ms] (mean)
+Time per request:       1.503 [ms] (mean, across all concurrent requests)
+Transfer rate:          296.93 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.7      0       4
+Processing:    15  146  16.6    146     179
+Waiting:       13  146  16.6    145     179
+Total:         20  147  16.1    146     179
+
+Percentage of the requests served within a certain time (ms)
+  50%    146
+  66%    150
+  75%    153
+  80%    154
+  90%    162
+  95%    168
+  98%    171
+  99%    174
+ 100%    179 (longest request)
+
+
+
+
+
+Sanic:
+qusr@qusr-MacBook-Pro p_sanic (master)*$ ab -c 100 -t 3 http://127.0.0.1:8000/api/chars
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 5000 requests
+Finished 7297 requests
+
+
+Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            8000
+
+Document Path:          /api/chars
+Document Length:        271 bytes
+
+Concurrency Level:      100
+Time taken for tests:   3.001 seconds
+Complete requests:      7297
+Failed requests:        0
+Total transferred:      2651288 bytes
+HTML transferred:       1984804 bytes
+Requests per second:    2431.89 [#/sec] (mean)
+Time per request:       41.120 [ms] (mean)
+Time per request:       0.411 [ms] (mean, across all concurrent requests)
+Transfer rate:          862.89 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    2   1.5      2      59
+Processing:     6   39   8.9     37     107
+Waiting:        4   35   7.8     34      94
+Total:         10   41   9.0     39     109
+
+Percentage of the requests served within a certain time (ms)
+  50%     39
+  66%     40
+  75%     41
+  80%     42
+  90%     46
+  95%     55
+  98%     74
+  99%     94
+ 100%    109 (longest request)
