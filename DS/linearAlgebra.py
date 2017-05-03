@@ -35,7 +35,6 @@ def distance(v, w):
     return magnituede(vector_subtract(v, w))
 
 ##### MATRIX CACUL
-
 def shape(A):
     num_rows = len(A)
     num_cols = len(A[0]) if A else 0
@@ -60,6 +59,8 @@ class TestForVectorCacul(unittest.TestCase):
         self.assertEqual(vector_add([1,2], [2,1]), [3,3])
     def test_vector_subtract(self):
         self.assertEqual(vector_subtract([1,2],[2,1]), [-1, 1])
+    def test_vector_sum(self):
+        self.assertEqual(vector_sum([[1,0],[0,1]]), [1,1])
     
 
 if __name__ == '__main__':
