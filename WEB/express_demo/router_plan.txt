@@ -1,0 +1,6 @@
+Endpoint               Result             CRUD    HTTP
+/api/chars             Returns_all_chars  Read    GET
+/api/char/<char_pron>  Return_a_single    Read    GET
+/api/chars             Adds_a_single      Create  POST
+/api/char/<char_pron>  Updates_a_single   Update  PUT
+/api/char/<char_pron>  Deletes_a_single   Delete  DELETE
